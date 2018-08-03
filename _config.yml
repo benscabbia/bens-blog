@@ -6,7 +6,7 @@ permalink:           /:categories/:title
 title:               Ben's Blog 
 tagline:             'A place to share my thoughts'
 description:         'Description Todo...'
-url:                 https://gudthing.github.io 
+url:                 https://gudthing.github.io/benjaminscabbia/ 
 baseurl:             ''
 paginate:            5
 
