@@ -7,7 +7,7 @@ title:               Ben's Blog
 tagline:             'A place to share my thoughts'
 description:         'Description Todo...'
 url:                 https://gudthing.github.io 
-baseurl:             'benjaminscabbia'
+baseurl:             /benjaminscabbia
 paginate:            5
 
 # About/contact
