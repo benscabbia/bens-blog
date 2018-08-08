@@ -1,0 +1,12 @@
+.center-image 
+{
+    margin: 0 auto;
+    display: block;
+}
+
+/* Enables horizontal scrolling in code blocks */
+pre 
+{
+    white-space: pre;
+    overflow: auto;
+}
