@@ -24,11 +24,11 @@ I purposely went into this with very little prior knowledge, as I wanted to gaug
 
 I decided to throw both myself and NDepend straight into the deep end. I’ve recently reconfigured my media management to make use of Docker, so I decided to run it against one of the services that I’ve been using: [Sonarr](https://github.com/Sonarr/Sonarr). I will be using NDepend with Visual Studio 2017 Community Edition.
 
-![NDepend Loading]({{ "/assets/images/ndepend-loading.png" | absolute_url }}){: .center-image }
+![NDepend Loading]({{ site.baseurl }}{% link /assets/images/ndepend-loading.png %}){: .center-image }
 
 Once it had finished analysing the project, I was greeted with a high-level overview of the code quality for the given project:
 
-![NDepend Dashboard]({{ "/assets/images/ndepend-dashboard.png" | absolute_url }}){: .center-image }
+![NDepend Dashboard]({{ site.baseurl }}{% link /assets/images/ndepend-dashboard.png %}){: .center-image }
 
 I was actually quite tactical about picking Sonarr as my first run, as a more experienced colleague of mine had always rated their code quality.
 
@@ -40,11 +40,11 @@ At this point, I decided to start looking at the documentation to see what each 
 
 From the NDepend analysis dashboard, I decided to take a look at what rules were being violated and why:
 
-![NDepend Rules View]({{ "/assets/images/ndepend-rules-view.png" | absolute_url }}){: .center-image }
+![NDepend Rules View]({{ site.baseurl }}{% link /assets/images/ndepend-rules-view.png %}){: .center-image }
 
 So, I clicked on the ’10’. This causes the UI to update with a new window:
 
-![NDepend Rules Violated]({{ "/assets/images/ndepend-rules-violated.png" | absolute_url }}){: .center-image }
+![NDepend Rules Violated]({{ site.baseurl }}{% link /assets/images/ndepend-rules-violated.png %}){: .center-image }
 
 How cool is that? Not only does it clearly highlight the rules, but it also provides you with some metrics on the cost of not fixing the issues. Having metrics like these are even more valuable than one might think. I have learned from experience that since technical debt is intangible to stakeholders, it is far too easy to postpone and never truly address. I’m sure as developers we can all relate to situations where technical debt is put on the backburner and new features always come first. There will always be scenarios where releasing a feature is more important than fixing the debt, but as developers, it’s critical that we do not lose track of it entirely. Choosing not to address technical debt is never a good idea, but even worse is when developers are unaware of the debt in the code base altogether. This is why I love these metrics – it makes the intangible tangible, forcing teams to acknowledge and tackle debt much sooner.
 
@@ -54,9 +54,9 @@ Another thing that I like about NDepend is that each section seems to have a min
 
 Now going back to the rules, even though I was not familiar with the code base I felt the ‘titles’ made it very clear on exactly what each rule was. I went for the simplest issue with the lowest breaking point, and, once more, I double clicked “Exception class name….suffixed with ‘Exception'”. Here is the UI with the class it identified:
 
-![NDepend Invalid Exception]({{ "/assets/images/ndepend-invalid-exception.png" | absolute_url }}){: .center-image }
+![NDepend Invalid Exception]({{ site.baseurl }}{% link /assets/images/ndepend-invalid-exception.png %}){: .center-image }
 
-![NDepend Invalid Exception 2]({{ "/assets/images/ndepend-invalid-exception-2.png" | absolute_url }}){: .center-image }
+![NDepend Invalid Exception 2]({{ site.baseurl }}{% link /assets/images/ndepend-invalid-exception-2.png %}){: .center-image }
 
 The UI made the drilling down very easy, but as soon as I saw the class on the left I thought the rule was wrong! However, if you haven’t already noticed, it’s actually named SlackExeption, not SlackException! This was really cool – I had already found an error (or typo) in the codebase. I had a look on their GitHub, and this class was actually [added in June 2016!](https://github.com/Sonarr/Sonarr/blob/816cf608fcef07e375aa750a863d0a7365108981/src/NzbDrone.Core/Notifications/Slack/SlackExeption.cs)
 
@@ -117,11 +117,11 @@ Now I decided to rewind and go back to the initial screen and look at another me
 
 In Sonarr’s code base, the technical debt stands at a B, which for an open-source project of that size sounds like a good result:
 
-![NDepend Technical Debt]({{ "/assets/images/ndepend-technical-debt.png" | absolute_url }}){: .center-image }
+![NDepend Technical Debt]({{ site.baseurl }}{% link /assets/images/ndepend-technical-debt.png %}){: .center-image }
 
 As with the rules in the previous section, I decided to start drilling down. I clicked on the percentage which then took me to a new tab showing me the technical debt. As expected, the rule the code base violated from the previous section was included below:
 
-![NDepend Technical Debt 2]({{ "/assets/images/ndepend-technical-debt-2.png" | absolute_url }}){: .center-image }
+![NDepend Technical Debt 2]({{ site.baseurl }}{% link /assets/images/ndepend-technical-debt-2.png %}){: .center-image }
 
 One of the things that I really like about this view is that you can sort and group by category, making it easier to uncover problem areas. I can see this being extremely helpful in a bigger team, where you can try and look out for the common issues. There are a bunch of groups, including things such as Naming conventions, Dead code, visibility etc.
 
@@ -129,7 +129,7 @@ Interestingly, NDepend seems to map most things to time. For instance, technical
 
 Here are the options for configuring man-time:
 
-![NDepend Technical Debt 3]({{ "/assets/images/ndepend-technical-debt-3.png" | absolute_url }}){: .center-image }
+![NDepend Technical Debt 3]({{ site.baseurl }}{% link /assets/images/ndepend-technical-debt-3.png %}){: .center-image }
 
 It’s all very self-explanatory, but I would have liked the option to use a completely different scale… perhaps a scale that is more abstract than time.
 
@@ -143,11 +143,11 @@ Sometimes you want an even higher-level overview of the code base. NDepend not o
 
 Below are some examples of diagrams that NDepend can support, each of which is fully customisable and interactive.
 
-![NDepend Diagrams]({{ "/assets/images/ndepend-diagrams.png" | absolute_url }}){: .center-image }
+![NDepend Diagrams]({{ site.baseurl }}{% link /assets/images/ndepend-diagrams.png %}){: .center-image }
 
 To show you how expressive these diagrams are, let’s take a look at the treemap:
 
-![NDepend Metric Treemap]({{ "/assets/images/ndepend-metric-treemap.png" | absolute_url }}){: .center-image }
+![NDepend Metric Treemap]({{ site.baseurl }}{% link /assets/images/ndepend-metric-treemap.png %}){: .center-image }
 
 In this particular case, the tremap view demonstrates the most complex methods in the solution.
 
@@ -159,7 +159,7 @@ You’ll have to take my word on this, but the chart is fully navigational! You 
 
 Lastly, and as the figurative cherry on the top, NDepend provides an excellent way to view all of the information mentioned along with many more things in a single place. The reports can be exported to a fully navigational webpage: 
 
-![NDepend Report View]({{ "/assets/images/ndepend-report-view.png" | absolute_url }}){: .center-image }
+![NDepend Report View]({{ site.baseurl }}{% link /assets/images/ndepend-report-view.png %}){: .center-image }
 
 It’s effectively a full-blown website (over 18mb in size!). These reports are detailed, and they have as much breadth and depth as the VS tool! I could totally see a dev team producing one of these reports and discussing it during a meeting. I can also see it being used to compare two points in time to show how the project has evolved. The possibilities are truly endless!
 

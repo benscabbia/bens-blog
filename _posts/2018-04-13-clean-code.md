@@ -6,7 +6,7 @@ tags: []
 excerpt_separator: <!--more-->
 ---
 
-![NDepend Loading]({{ "/assets/images/clean-code-cover.png" | absolute_url }}){: .center-image }
+![NDepend Loading]({{ site.baseurl }}{% link /assets/images/clean-code-cover.png %}){: .center-image }
 
 Clean Code
 
