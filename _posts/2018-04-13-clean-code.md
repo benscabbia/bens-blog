@@ -17,7 +17,7 @@ Clean Code
 </sup>
 
 Today I started reading [Clean code: A Handbook of Agile Software Craftsmanship](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin. As a helpful reminder, I will summarise the core concepts from each of the chapters. Conveniently, the guys at [codingblocks.net](https://www.codingblocks.net/) have recorded a podcast series discussing each chapter, which I will use to ensure I have fully digested the content! I will provide their links, along with supporting material that I found helpful.
-
+<!--more-->
 ----
 
 ## Chapter 2 - Meaningful Names
