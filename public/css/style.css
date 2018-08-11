@@ -4,6 +4,12 @@
     display: block;
 }
 
+.small-center-text 
+{
+    text-align: center;
+    font-size: 60%
+}
+
 /* Enables horizontal scrolling in code blocks */
 pre 
 {

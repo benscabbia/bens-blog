@@ -2,7 +2,7 @@
 layout: post
 title: 'Async Programming in .NET: Part 3' 
 categories: programming
-tags: [.NET, asnyc, c#]
+tags: [.NET, async, c#]
 excerpt_separator: <!--more-->
 ---
 
@@ -165,7 +165,7 @@ It’s subtle, but its an optimisation. Every time we use async method, the comp
 
 ## Avoid Async Void
 
-I already discussed this in [part 2]({{ site.baseurl }}{% link _posts/2018-07-02-async-programming-in-dotnet-part-3.md %}), but seriously, don’t do this unless it’s an event handler!
+I already discussed this in [part 2]({{ site.baseurl }}{% link _posts/2018-06-19-async-programming-in-dotnet-part-2.md %}), but seriously, don’t do this unless it’s an event handler!
 
 ## Strive for stateless code
 

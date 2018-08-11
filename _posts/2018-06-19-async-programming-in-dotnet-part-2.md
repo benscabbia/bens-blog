@@ -6,7 +6,7 @@ tags: [.NET, async, c#]
 excerpt_separator: <!--more-->
 ---
 
-Following on from part 1, in this post I will discuss in detail how to write async code in C#.
+Following on from [part 1]({{ site.baseurl }}{% link _posts/2018-06-13-async-programming-in-dotnet-part-1.md %}), in this post I will discuss in detail how to write async code in C#.
 
 As a recap, asynchronous code essentially helps to remove performance bottlenecks and improve responsiveness of the application. It’s ideal for any scenario where your application is subject to blocking (I/O bound). Many APIs in .NET already support async programming (HttpClient, StreamWriter,StreamReader etc), but one might wonder why it’s not used everywhere (Node.js anyone?). 
 
