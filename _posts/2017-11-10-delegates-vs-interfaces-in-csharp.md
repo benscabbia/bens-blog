@@ -10,7 +10,7 @@ Delegates and interfaces have a lot in common. In fact, any problem that can be 
 
 <!--more-->
 
-Before we dive in, if you are not familiar with delegates, I suggest you first read my post on Action and Func, which introduces delegates. If you are already familiar, then continue below. I will briefly introduce interfaces, but not extensively, as it’s not the purpose of this article.
+Before we dive in, if you are not familiar with delegates, I suggest you first read my post on [Action and Func]({{ site.baseurl }}{% link _posts/2017-11-02-c-sharp-action-func-generic-delegates.md %}), which introduces delegates. If you are already familiar, then continue below. I will briefly introduce interfaces, but not extensively, as it’s not the purpose of this article.
 
 ### Requirements:
 We have a customer data dump, with hundreds of properties, firstName, lastName, favourite jedi, house they fight for in game of thrones etc. etc. We must design and implement a flexible architecture so we can filter any of these customers using one or many of these properties.
@@ -136,4 +136,4 @@ I spent a while searching for the perfect answer for this, and found that we sho
 
 In our example, our interface only had a single interface which had to be implemented multiple times to provide a range of filtering. Furthermore, we also needed multicast capability to combine the various filters, therefore making the delegate the obvious candidate.
 
-For more information on the delegates and an introduction to generic delegates (Action and Func), view my other post here.
+For more information on the delegates and an introduction to generic delegates (Action and Func), view my other post [here]({{ site.baseurl }}{% link _posts/2017-11-02-c-sharp-action-func-generic-delegates.md %}).
