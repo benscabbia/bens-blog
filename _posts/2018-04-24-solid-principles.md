@@ -10,7 +10,7 @@ I have recently started reading Clean Code and I have been summarizing each chap
 
 <!--more-->
 
-There are three fundamental principles which must be understood before diving into the principles of SOLID. Below is a summary, but I have a full post here.
+There are three fundamental principles which must be understood before diving into the principles of SOLID. Below is a summary, but I have a full post [here]({{ site.baseurl }}{% link _posts/2018-04-15-high-cohesion-low-coupling-and-strong-encapsulation.md %}).
 
 * **High Cohesion** – What a class can do. The lower the cohesion, the more the class does, becoming unfocused on what it should do. High cohesion means its focused on its purpose.
 * **Low Coupling** – How related two classes are. High coupling causes a change in one class to affect the other, thus making it difficult to change. Low coupling makes changes painless and independent.
