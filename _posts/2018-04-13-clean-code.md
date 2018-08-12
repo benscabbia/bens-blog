@@ -8,8 +8,6 @@ excerpt_separator: <!--more-->
 
 ![NDepend Loading]({{ site.baseurl }}{% link /assets/images/clean-code-cover.png %}){: .center-image }
 
-Clean Code
-
 <sup>
     <sup>
         Last Update: 15/07/18
