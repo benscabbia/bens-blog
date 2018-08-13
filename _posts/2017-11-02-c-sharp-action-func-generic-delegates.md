@@ -14,7 +14,7 @@ Before I go into generic delegates, I will briefly cover what a delegate is and 
 
 ## Delegates
 
-I have already discussed delegates before, but as I like my articles to be self-enclosed, I will reintroduce them with another example (they’re also a relatively new concept for me, so I’m happy to repeat the topic!).
+I have already discussed [delegates before]({{ site.baseurl }}{% link _posts/2017-08-02-delegates-and-events-in-csharp.md %}), but as I like my articles to be self-enclosed, I will reintroduce them with another example (they’re also a relatively new concept for me, so I’m happy to repeat the topic!).
 
 **A delegate is an object that knows how to call a method**. It’s a special type which holds a reference to a method with a matching signature (the return type and parameter).
 
