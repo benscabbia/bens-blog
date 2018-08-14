@@ -7,7 +7,7 @@ title:               Ben's Blog
 tagline:             'A place to share my thoughts'
 description:         'Description Todo...'
 url:                 https://benscabbia.github.io 
-baseurl:             /bens-blog
+baseurl:            '' 
 paginate:            5
 
 # About/contact
