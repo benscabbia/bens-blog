@@ -1,9 +1,27 @@
-TODO
+Welcome to my personal blog, which you can view here: https://benscabbia.co.uk
 
+## Development
 
-## Built with Layon
+There are two branches:
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for the hosted site
+
+You can quickly setup your development environment via Docker. Simply navigate to the root project directory and run: 
+
+```
+docker-compose up
+```
+
+This will start the webserver and enable you to browse the site at: http://0.0.0.0:4000. You can then in another terminal run a second docker command to watch the directory, meaning it will detect changes and automatically recompile: 
+
+```
+docker-compose exec site jekyll build --watch
+```
+
+## Built with Jekyll > Lanyon
+The blog is built with Jekyll[Jekyll](http://jekyllrb.com). The theme is forked from Lanyon:
+Lanyon - an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 
 ### Themes
@@ -22,12 +40,6 @@ To use a theme, add any one of the available theme classes to the `<body>` eleme
 
 To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
 
-## Development
-
-Lanyon has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
 ## License
 
