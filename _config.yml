@@ -6,15 +6,20 @@ permalink:           /:categories/:title
 title:               Ben's Blog 
 tagline:             'A place to share my thoughts'
 description:         'Description Todo...'
-url:                 https://benscabbia.github.io 
-baseurl:            '' 
+url:                 https://benscabbia.co.uk 
+baseurl:             '' 
 paginate:            5
 
 # About/contact
 author:
   name:              Benjamin Scabbia 
-  url:               https://benjaminscabbia.co.uk
+  url:               https://benscabbia.co.uk
   email:             benscabbia@gmail.com
+  stackoverflowId:   3828228
+  linkedIn:          benjaminscabbia
+  github:            benscabbia
+  gitlab:            benscabbia
+  #twitter:           
 
 # Custom vars
 version:             1.0.0
