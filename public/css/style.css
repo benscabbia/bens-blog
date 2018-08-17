@@ -16,3 +16,15 @@ pre
     white-space: pre;
     overflow: auto;
 }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.6667em;
+}
+
+/* Social media footer icons */
+.fas, .fab {
+    color: #aa759f;
+  }
+  

@@ -1,0 +1,47 @@
+<footer>
+    &copy; {{ site.time | date: '%Y' }} - {{ site.author.name}}
+  
+    &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+    
+    <!--
+    <a href="/feed.xml">
+      <span class="fas fa-rss"/>
+    </a>&nbsp; -->
+  
+    {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}">
+      <span class="fas fa-envelope"/>
+      </a>&nbsp;
+    {% endif %}
+  
+    {% if site.author.twitter %}
+      <a href="https://twitter.com/{{ site.author.twitter }}">
+        <span class="fab fa-a fa-twitter"/>
+      </a>&nbsp;
+    {% endif %}
+  
+    {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}">
+        <span class="fab fa-github"/>
+      </a>&nbsp;
+    {% endif %}
+
+    {% if site.author.gitlab %}
+      <a href="https://gitlab.com/{{ site.author.gitlab }}">
+        <span class="fab fa-gitlab"/>
+      </a>&nbsp;
+    {% endif %}
+  
+    {% if site.author.linkedIn %}
+      <a href="https://linkedin.com/in/{{ site.author.linkedIn }}">
+        <span class="fab fa-linkedin-in"/>
+      </a>&nbsp;
+    {% endif %}
+  
+    {% if site.author.stackoverflowId %}
+      <a href="https://stackoverflow.com/users/{{ site.author.stackoverflowId }}">
+        <span class="fab fa-stack-overflow"/>
+      </a>&nbsp;
+    {% endif %}
+  
+  </footer>
