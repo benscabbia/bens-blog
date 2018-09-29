@@ -223,10 +223,36 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 
 ----
 
-## Chapter 10 - Coming Soon!
+## Chapter 10 - Classes
+
+* Loosening encapsulation for tests is fine - **tests rule**!
+* Classes **should be small** with **single responsibilities** 
+  * **Name the class describing what it fulfils**. The more ambiguous the name, the more likely its doing too much
+    * 'Manager', 'Processor', 'Super' are smells
+  * Describe the class in <25 words, without:
+    * 'if', 'and', 'or', 'but'
+* Adhere to [Single Responsibility Principle]({{ site.baseurl }}{% link _posts/2018-04-24-solid-principles.md %}#single-responsibility-principle) - the class or module should have **1 and only 1 reason to change**
+  * Getting code working vs clean code are 2 **different** activities. When code works, go back and break overstuffed classes into decoupled units with single responsibilities. 
+    * Some say many single purpose classes makes it difficult to get bigger picture, but actually there is **no additional complexity** as same moving parts. The difference is few toolboxes with many tools vs lots of small organised toolboxes with a few tools. Or let the dev wade through unnecessary noise vs provide concise and only relevant units
+  * In a clean system you should **organise classes to reduce the risk of change**
+    * Why? **Change == risk** and it breaks the [Open/Close principle]({{ site.baseurl }}{% link _posts/2018-04-24-solid-principles.md %}#open-closed-principle) (**open for extension, closed for modification**)
+* Cohesive - **small number of instance variables**
+  * Each method should manipulate 1+ of those variables
+  * High cohesion - **each variable is used by many methods**
+    * **don't pass lots of params from function to function**, make them instance variables
+    * If this reduces cohesion, then **split them in a smaller class** (instance variables + methods = class)
+* Needs change, code will change - therefore **if a client depends upon concrete details, its a risk**
+  * Much safer to **depend on a concept** (interfaces, abstract classes)
+  * **Don't depend on concrete behaviours**
+    * More testable code
+    * **less coupled** thus more flexible, promotes reuse and better isolated from change
+    * less coupling adheres to [Dependency Inversion principle]({{ site.baseurl }}{% link _posts/2018-04-24-solid-principles.md %}#dependency-inversion-principle) (open for extension, closed for modification) - **depend on abstractions, not implementations**
 
 ----
 
+## Chapter 11 - Coming Soon!
+
+----
 #### Supporting Material: 
 
 * [Chapter 2](https://www.codingblocks.net/podcast/clean-code-writing-meaningful-names/)
@@ -238,3 +264,4 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 * [Chapter 8](https://www.codingblocks.net/podcast/clean-code-programming-around-boundaries/)
 * [Chapter 9](https://www.codingblocks.net/podcast/how-to-write-amazing-unit-tests/)
 * [Chapter 10](https://www.codingblocks.net/podcast/how-to-write-classes-the-right-way/)
+* [Chapter 11](https://www.codingblocks.net/podcast/how-to-build-maintainable-systems/)
