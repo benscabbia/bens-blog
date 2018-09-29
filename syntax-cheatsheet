@@ -1,0 +1,10 @@
+Reminder on how to do things that I tend to forget :)! 
+
+Link:
+[part 2]({{ site.baseurl }}{% link _posts/2018-07-02-async-programming-in-dotnet-part-3.md %})
+
+Image:
+![X-Ray usage example]({{ site.baseurl}}{% link /assets/images/x-ray-example.gif %}){: .center-image }
+
+docker-compose up
+docker-compose exec site jekyll build --watch
