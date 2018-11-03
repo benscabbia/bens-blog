@@ -257,8 +257,9 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 ## Chapter 11 - Systems
 
 * **Separate construction from usage** - starting up is a concern and usage is another concern
-  ```
-  public Service getService(){
+  ```csharp
+  public Service getService()
+  {
     if (service == null) service = new MyServiceImpl(...); // a reasonable default for most cases?
     return service;
   }
