@@ -10,12 +10,13 @@ excerpt_separator: <!--more-->
 
 <sup>
     <sup>
-        Last Update: 29/09/18
+        Last Update: 03/11/18
     </sup>
 </sup>
 
 Today I started reading [Clean code: A Handbook of Agile Software Craftsmanship](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin. As a helpful reminder, I will summarise the core concepts from each of the chapters. Conveniently, the guys at [codingblocks.net](https://www.codingblocks.net/) have recorded a podcast series discussing each chapter, which I will use to ensure I have fully digested the content! I will provide their links, along with supporting material that I found helpful.
 <!--more-->
+
 ----
 
 ## Chapter 2 - Meaningful Names
@@ -32,6 +33,9 @@ Today I started reading [Clean code: A Handbook of Agile Software Craftsmanship]
 * **Variables with context**? Move them in a **class**.
 * **Don’t add types in names**
 * **Refactor if a better name**
+
+
+----
 
 ## Chapter 3 - Functions
 * **Functions should be small…** smaller than that (repeat 3-4 times)
@@ -54,7 +58,7 @@ Today I started reading [Clean code: A Handbook of Agile Software Craftsmanship]
 * **Function = Verb**, **Class = Noun** works well `Write(name)`
 * **Avoid side effects!** If you `DoX()`, it should do `X`, not do `X + Y`
   * Ensures we don’t unintentionally add Temporaral Coupling;  a kind of coupling where code is dependent on time in some way.
-* **Command Query Separation** –  A method **does something XOR answer something** 
+* **Command Query Separation** –  A method **does something XOR answer something**
   * a method **may change the state of an object**
   * XOR a method **may return info on that object, NEVER both**
 * **Exceptions are better than error codes**
@@ -75,7 +79,7 @@ Today I started reading [Clean code: A Handbook of Agile Software Craftsmanship]
 
 ```csharp
 // check if employee is eligible for full benefits
-if(employee.flags == Hourly && age > 64) 
+if(employee.flags == Hourly && age > 64)
 OR
 if(employeeEligibleForFullBenefits)
 ```
@@ -148,7 +152,7 @@ void DoSomething()
     try { c.DoIt(); }
     catch(MyCustomException e) { LogError(e); }
 }
-class Custom 
+class Custom
 {
     private LibraryAPI lib = new LibraryAPI();
     void DoIt(){
@@ -156,11 +160,11 @@ class Custom
         catch(ExceptionLib1 e){ throw MyCustomException(e) }
         catch(ExceptionLib2 e){ throw MyCustomException(e) }
         catch(ExceptionLib3 e){ throw MyCustomException(e) }
-    }    
+    }
 }
 ```
 
-* Above is much cleaner than directly implementing LibraryAPI and referencing that across app. Wrapping 3rd party API also means you’re not tied to a vendor. 
+* Above is much cleaner than directly implementing LibraryAPI and referencing that across app. Wrapping 3rd party API also means you’re not tied to a vendor.
 * **Never use try catch for flow control**
 * **Return empty list over null**, callers can then check for nulls
   * special case pattern (return an empty object)
@@ -205,7 +209,7 @@ Code at **boundaries needs clear separation** and tests to **define expectations
   * **first class citizen**, requires thought, design and care – don’t worry about making it as efficient as production code
   * **Poorly written tests are as bad if not worse than having no tests**. This is due to the difficulties in maintaining it with production code
   * **no unit tests means you cannot safely refactor and clean up code**
-* Unit tests keep your code flexible 
+* Unit tests keep your code flexible
   * unit tests ensures code it flexible, maintainable and reusable
   * Without tests, you will be reluctant to make changes because you might introduce bugs, fact.
   * With tests, you do not fear introducing bugs enabling you to improve architecture and design without fear
@@ -226,13 +230,13 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 ## Chapter 10 - Classes
 
 * Loosening encapsulation for tests is fine - **tests rule**!
-* Classes **should be small** with **single responsibilities** 
+* Classes **should be small** with **single responsibilities**
   * **Name the class describing what it fulfils**. The more ambiguous the name, the more likely its doing too much
     * 'Manager', 'Processor', 'Super' are smells
   * Describe the class in <25 words, without:
     * 'if', 'and', 'or', 'but'
 * Adhere to [Single Responsibility Principle]({{ site.baseurl }}{% link _posts/2018-04-24-solid-principles.md %}#single-responsibility-principle) - the class or module should have **1 and only 1 reason to change**
-  * Getting code working vs clean code are 2 **different** activities. When code works, go back and break overstuffed classes into decoupled units with single responsibilities. 
+  * Getting code working vs clean code are 2 **different** activities. When code works, go back and break overstuffed classes into decoupled units with single responsibilities.
     * Some say many single purpose classes makes it difficult to get bigger picture, but actually there is **no additional complexity** as same moving parts. The difference is few toolboxes with many tools vs lots of small organised toolboxes with a few tools. Or let the dev wade through unnecessary noise vs provide concise and only relevant units
   * In a clean system you should **organise classes to reduce the risk of change**
     * Why? **Change == risk** and it breaks the [Open/Close principle]({{ site.baseurl }}{% link _posts/2018-04-24-solid-principles.md %}#open-closed-principle) (**open for extension, closed for modification**)
@@ -250,10 +254,46 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 
 ----
 
-## Chapter 11 - Coming Soon!
+## Chapter 11 - Systems
+
+* **Separate construction from usage** - starting up is a concern and usage is another concern
+  ```
+  public Service getService(){
+    if (service == null) service = new MyServiceImpl(...); // a reasonable default for most cases?
+    return service;
+  }
+  ```
+  * Above looks reasonable, faster startup due to lazy loading but there are issues:
+    * **Hard coded a dependency** on `MyServiceImpl` and all constructor args and testing is tricky.
+    * Small **violation in Single responsibility principle** as we have a null test and the block
+    * Worst of all, this method **has to know the global context**
+  * It's acceptable, but will quickly get abused, and **you'll have initialization logic scattered everywhere**.
+  * **Modularity is much more important than convenient idioms**! Enforce a global consistent strategy for resolving dependencies!
+* **Factories separates application from the building** and resolving of dependency
+* **Use Dependency Injection and Inversion of control to separate construction from use**
+  * IOC moves secondary responsibilities from an object to other objects that are dedicated to a single purposes (supports SRP)
+    * **An object should not be responsible for instantiating dependencies itself**, instead, pass responsibility to another authoritative mechanism
+  * Construction or Property DI is resolved at runtime. Can normally use to invoke a factory or proxies
+* Focus on todays stories, **but be prepared to go back and refactor code**
+  * **Getting it right first time is a myth**, so refactor, expand system to implement new stories tomorrow (iterative and incremental agility!)
+    * **Clean code, TDD and refactoring will make this work at code level**
+    * **At system level, if you have proper separation of concerns, architecture can grow incrementally**
+* **Big Design up front is harmful** since it inhibits adapting to change due to psychological resistance to discarding prior effort!
+  * it's economically feasible if it separates concerns effectively
+* **Keep designs naively simple** but ensure architecture is decoupled, enabling story delivery to be quick, and adding more infrastructure as we scale up and maintain ability to respond to new information
+* Modularity and separation of concerns make decentralized management and decision making possible. **In a large system, no one person can make all decisions**.
+  * **Postpone decisions until last possible moment** → more information = better decisions whereas premature decisions is a decision made with suboptimal knowledge
+* **Use standards wisely, when they add value** → should make it easier t reuse ideas and components, ensure it primarily meets the needs of the adopters; the real intended users
+* **Keep it clean, invasive architectures overwhelms domain logical and impacts agility**
+  * if domain logic obscured, quality suffers, bugs creep in, stories harder to implement, agility is lost
 
 ----
-#### Supporting Material: 
+
+## Chapter 12 - Coming Soon!
+
+----
+
+#### Supporting Material:
 
 * [Chapter 2](https://www.codingblocks.net/podcast/clean-code-writing-meaningful-names/)
 * [Chapter 3](https://www.codingblocks.net/podcast/how-to-write-amazing-functions/)
