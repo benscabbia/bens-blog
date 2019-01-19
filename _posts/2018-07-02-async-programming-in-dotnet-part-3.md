@@ -38,7 +38,7 @@ public static async Task<Person> GetPersonAsync(Uri uri)
 }
 ```
 
-In our code above, let’s imagine we have refactored our `GetPersonAsyncto` be asynchronous, whilst leaving the action `GetFullName` as synchronous. This code will block! To fully understand why it blocks, lets go through the execution step by step step:
+In our code above, let’s imagine we have refactored our `GetPersonAsync` to be asynchronous, whilst leaving the action `GetFullName` as synchronous. This code will block! To fully understand why it blocks, lets go through the execution step by step step:
 
 1. A request comes in to get the full name
 2. A thread with the ASP.NET request context calls `GetPersonAsync`
