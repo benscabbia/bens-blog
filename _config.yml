@@ -5,7 +5,7 @@ permalink:           /:categories/:title
 # Setup
 title:               Ben's Blog 
 tagline:             'A place to share my thoughts'
-description:         'Description Todo...'
+description:         Ben's Blog
 url:                 https://benscabbia.co.uk 
 baseurl:             '' 
 paginate:            5
