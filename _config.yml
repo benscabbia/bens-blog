@@ -24,6 +24,9 @@ author:
 # Custom vars
 version:             1.0.0
 
+disqus:
+  shortname: benscabbia
+  
 # Plugins
 plugins:
   - jekyll-paginate
