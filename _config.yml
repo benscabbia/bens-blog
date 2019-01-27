@@ -39,5 +39,6 @@ disqus:
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-seo-tag
+  - jekyll-seo-tag 
+  - jekyll-sitemap
 
