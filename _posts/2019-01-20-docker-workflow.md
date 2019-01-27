@@ -167,18 +167,18 @@ services:
   # Define a service called example.app
   example.app:
 
-    # Create an image called example.app
-    image: example.app
+  # Create an image called example.app
+  image: example.app
 
-    # Create a container called example.app
-    container_name: example.app
+  # Create a container called example.app
+  container_name: example.app
 
-    # When creating the image, look for a Dockerfile located in Example.App. The build: path/to/dockerfile is shortform
-    build: Example.App
+  # When creating the image, look for a Dockerfile located in Example.App. The build: path/to/dockerfile is shortform
+  build: Example.App
 
-    # Set an environment variable which is available to our container
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+  # Set an environment variable which is available to our container
+  environment:
+    - ASPNETCORE_ENVIRONMENT=Development
       
   example.proxy:
     image: example.proxy
@@ -206,7 +206,7 @@ The rest should be fairly self explanatory, but effectively, using docker-compos
 2. Define your services so it can run your images in an isolated environment
 3. Execute `docker-compose up` so it starts and runs your whole app 
 
-How cool is that? Lastly, do note that when you make a change to, for example, a projects source code, you will need to have that image rebuild. Unfortunately, `docker-compose up` does not rebuild images, so to force a rebuild, you have to first run: `docker-compose build` followed by `docker-compose up`. 
+How cool is that? Lastly, do note that when you make a change to, for example, a projects source code, you will need to have that image rebuild. Unfortunately, `docker-compose up` does not rebuild images, so to force a rebuild, you have to first run: `docker-compose build` followed by `docker-compose up`. You can also combine the two by passing the `--build` flag i.e. `docker-compose up --build`. 
 
 Hopefully, you've found this post somewhat helpful, if you have, it would be great if you could star the [project](https://github.com/OllieDay/asp-net-core-nginx-https-docker-compose-example) the post was built on! As a next step, I'd encourage you to find other docker projects, run them, take a look at how they're wired up and then try to set up your development workflow! 
 
