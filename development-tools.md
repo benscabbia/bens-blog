@@ -3,7 +3,7 @@ layout: page
 title: Ben's Ultimate Developer and Power Users Tool List
 ---
 <sub><sub>
-**Last update 09/08/2018**
+**Last update 27/01/2019**
 </sub></sub>
 
 Ben’s Ultimate Developer and Power Users Tool - Yes, this might sound familiar and I actually got the inspiration from [Scott Hanselman’s Ultimate Developer and Power Users Tool](https://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx)! Anyway, below are my favourite tools that help me as a developer (and user): 
@@ -12,13 +12,14 @@ Ben’s Ultimate Developer and Power Users Tool - Yes, this might sound familiar
 
 * [Fira Code](https://github.com/tonsky/FiraCode) - My favourite font (with ligature support)!
 * [GitKraken](https://www.gitkraken.com/) - The best git GUI that I’ve ever used. It seriously just blows all over GUI’s out the water. Chunking has never been so easy!
-* [Hyper](https://hyper.is/) - A cross-platform terminal. It’s electron, but I love it.
+* [Kitty](https://github.com/kovidgoyal/kitty) - The one terminal emulator to rule them all. It's my new favourite.
+    * [Ranger](https://github.com/ranger/ranger) - For the vim users, the ultimate companion! 
 
 ## Chrome
 
 * [Bitwarden](https://bitwarden.com/) - Keep ’em password safe. An open source password manager with native apps on all platforms - and an awesome chrome plugin!
 * [CamelCamelCamel](https://uk.camelcamelcamel.com/) - Price watcher and price comparer on amazon. Don’t miss those deals!
-* [Inbox](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) by Google - Welcome to the future. Snooze emails for later (tomorrow, next week, sometime in the future (an actual option)), great filtering and more. This is just a different view for Gmail, so both work perfectly together. The plugin is also nice to email yourself a webpage.
+* [Octotree](https://github.com/ovity/octotree) - Browse github repos with index trees, enough said. 
 * [UBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) - If you’re using AdBlock, its time to switch to this open source solution, unless you’re in favour of [whitelisting](https://adblockplus.org/acceptable-ads).
 
 ## Mobile Apps
@@ -39,6 +40,7 @@ Ben’s Ultimate Developer and Power Users Tool - Yes, this might sound familiar
 ## Virtualization
 
 * [Proxmox](https://www.proxmox.com/en/) - In one of my previous jobs, we switched our server (running 6 VMs) from VirtualBox to Proxmox and oh my. Stability and performance dramatically improved. The best thing we ever did!
+* [Docker](https://www.docker.com/) - Just Dockerize all the things! 
 
 ## Visual Studio
 
