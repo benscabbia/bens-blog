@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Docker Workflow
+description: Docker in practice! This post will show you how to setup your dev environment with docker.
 categories: programming
 tags: [docker, devops]
 excerpt_separator: <!--more-->

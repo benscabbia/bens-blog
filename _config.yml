@@ -21,6 +21,15 @@ author:
   gitlab:            benscabbia
   #twitter:           
 
+# For SEO Tag
+social:
+  name:             Ben Scabbia
+  links:
+    - https://github.com/benscabbia
+    - https://gitlab.com/benscabbia
+    - https://stackoverflow.com/users/3828228/benscabbia
+    - https://www.linkedin.com/in/benjaminscabbia/
+
 # Custom vars
 version:             1.0.0
 
@@ -30,4 +39,5 @@ disqus:
 # Plugins
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
 
