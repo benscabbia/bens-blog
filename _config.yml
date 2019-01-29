@@ -21,6 +21,9 @@ author:
   gitlab:            benscabbia
   #twitter:           
 
+github:
+  repo: https://github.com/benscabbia/bens-blog
+
 # For SEO Tag
 social:
   name:             Ben Scabbia
