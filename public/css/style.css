@@ -28,3 +28,7 @@ footer {
     color: #aa759f;
   }
   
+/* Calendar date and reading time*/
+.post-date {
+    font-size: .75rem
+}
