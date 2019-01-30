@@ -28,7 +28,10 @@ footer {
     color: #aa759f;
   }
   
-/* Calendar date and reading time*/
+/* Calendar date and reading time display settings*/
 .post-date {
     font-size: .75rem
+}
+.spacer {
+    padding-left: 15px;
 }
