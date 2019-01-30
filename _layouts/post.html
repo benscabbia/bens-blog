@@ -4,11 +4,9 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-
-
   <span class="post-date">
-    <i class="far fa-calendar-alt"></i>
-    {{ page.date | date_to_string }} - {% include reading_time.html text=content %} - {% include
+    {% include date.html date=page.date %}
+    {% include reading_time.html text=content %}
     edit.html %}
   </span>
   {{ content }}
