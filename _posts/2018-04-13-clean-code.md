@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 
 <sup>
     <sup>
-        Last Update: 03/11/18
+        Last Update: 16/02/19
     </sup>
 </sup>
 
@@ -290,9 +290,47 @@ Code at **boundaries needs clear separation** and tests to **define expectations
 
 ----
 
-## Chapter 12 - Coming Soon!
+## Chapter 12 - Emergence
+* A design is simple when it:
+  1. **Runs all the tests**
+     * provides means to **verify system works** as intended
+     * systems that are not testable are not verifiable - should non-verified system be deployed?
+     * **Testable system = low coupling, high cohesion**
+       * naturally try make tests simpler, therefore small SRP classes, loosely couples (Dependency Inversion Principle)
+  2. **no duplication**
+  3. **Express intent** of programmer
+  4. **Minimizes number of classes and methods**
+
+* Rule 2-4: Refactoring
+  * **tests give security** during refactoring
+    * every few lines question if design degraded - if so clean it up. Lookout for:
+      * **higher cohesion**
+      * **decrease coupling**
+      * **separate concerns**
+      * **modularize system concerns**
+      * **shrink functions and classes**
+      * **better names**
+      * **Summary: Remove duplication + ensure expressiveness, minimise classes & methods**
+  * No Duplication
+    * risks are: additional work, more complexity
+    * as you remove duplication, violations to SRP will emerge (Template Pattern helps)
+  * Expressive
+    * **majority of cost is maintenance**
+    * if it makes sense to you now, **make sure the code clearly expresses intent of the author**
+      * the clearer, the less time, reducing defects and cost of maintenance
+    * express yourself by:
+      * **good naming (don't surprise when you look at responsibilities)**
+      * **small functions and classes - easy to name, write and understand**
+      * **use standard nomenclature - name code patterns after design patterns**
+      * **well-written unit tests - they are documentation**
+      * **take pride - when it works, you must make it clean, take care**
+  * Minimise classes and methods
+    * don't go too crazy with eliminating duplication, code expressive, SRP - too many tiny classes or **too much abstraction is not good**.
+    * tests, duplication and expression more important than low counts
 
 ----
+
+## Chapter 13 - Coming Soon!
 
 #### Supporting Material:
 
