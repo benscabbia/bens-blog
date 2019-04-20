@@ -2,7 +2,7 @@
 layout: post
 title: NDepend - Static Code Analysis
 categories: programming
-tags: [visual Studio, ndepend]
+tags: [visual studio, ndepend]
 excerpt_separator: <!--more-->
 ---
 
@@ -10,7 +10,7 @@ Over the past few months, I have been trialling a number of different tools to h
 
 <!--more-->
 
-## Introduction 
+## Introduction
 
 As a quick recap, over the past few months I’ve tried a number of popular ‘code quality’ tools such as ReSharper, but the only ones which I’ve embedded into my daily work are Roslynator and IntelliCode; both of which are excellent. I was really excited to try NDepend, particularly as it’s a tool that is recommended by many leading .NET developers (including Scott Hanselman and Steve Smith) and so I went into this review with high expectations. For the record, the author of NDepend, Patrick Smacchia, was generous enough to give me a license so I could write up this post. Let’s dive in!
 
@@ -64,9 +64,9 @@ I then went ahead and tried a few of the other rules, and one had been violated 
 
 ```csharp
 // <Name>Exception class name should be suffixed with 'Exception'</Name>
-warnif count > 0 from t in Application.Types where 
+warnif count > 0 from t in Application.Types where
     t.IsExceptionClass &&
-  
+
 // We use SimpleName, because in case of generic Exception type
 // SimpleName suppresses the generic suffix (like <T>).
 !t.SimpleNameLike(@"Exception$") &&
@@ -79,8 +79,8 @@ select new {
 }
 
 //<Description>
-// This rule warns about *exception classes* whose names are not 
-// suffixed with **Exception**. It is a common practice in the .NET 
+// This rule warns about *exception classes* whose names are not
+// suffixed with **Exception**. It is a common practice in the .NET
 // world to suffix exception classes names with **Exception**.
 //
 // For exception base classes, the suffix **ExceptionBase**
@@ -98,15 +98,16 @@ Even the list showing all the rules themselves can be configured:
 from r in Rules
 where r.IsCritical && r.IsViolated()
 orderby r.Debt().Value descending
-select new { 
-   r, 
-   Issues = r.Issues(), 
-   Debt = r.Debt(), 
-   AnnualInterest = r.AnnualInterest(), 
+select new {
+   r,
+   Issues = r.Issues(),
+   Debt = r.Debt(),
+   AnnualInterest = r.AnnualInterest(),
    BreakingPoint = r.BreakingPoint(),
    Category = r.Category
 }
 ```
+
 The very first time I looked at it I instantly thought it very LINQ-like, and a further google revealed that it is indeed a customized version of LINQ called [CQLINQ](https://www.ndepend.com/docs/cqlinq-syntax). Having a custom query language based on LINQ gets a massive high five from me. I decided to try and modify the rule, and, in turn, it automatically detected my changes and instantly reapplied the rule. The real-time feedback is a great user experience!
 
 ## Technical Debt: “needs a scale that is more abstract than time”
@@ -151,13 +152,13 @@ To show you how expressive these diagrams are, let’s take a look at the treema
 
 In this particular case, the tremap view demonstrates the most complex methods in the solution.
 
-> Each rectangle is a method, and the area of the rectangle is proportional to the number of lines of code of the corresponding method. The colour of the rectangle then represents the Cyclomatic Complexity, which measures the unique logical paths that can be taken through a code structure. 
+> Each rectangle is a method, and the area of the rectangle is proportional to the number of lines of code of the corresponding method. The colour of the rectangle then represents the Cyclomatic Complexity, which measures the unique logical paths that can be taken through a code structure.
 
 You’ll have to take my word on this, but the chart is fully navigational! You can zoom in each area and interact with it to identify the culprits! I think it’s fantastic the way NDepend has managed to find ways to visually represent this complex information. I can see them being extremely useful in larger projects, helping project leads further understand why the team unintentionally (or intentionally) avoids working in those areas!
 
 ## Reports: “the cherry on the top”
 
-Lastly, and as the figurative cherry on the top, NDepend provides an excellent way to view all of the information mentioned along with many more things in a single place. The reports can be exported to a fully navigational webpage: 
+Lastly, and as the figurative cherry on the top, NDepend provides an excellent way to view all of the information mentioned along with many more things in a single place. The reports can be exported to a fully navigational webpage:
 
 ![NDepend Report View]({{ site.baseurl }}{% link /assets/images/ndepend-report-view.png %}){: .center-image }
 
