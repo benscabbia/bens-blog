@@ -30,7 +30,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (deprecated??) -->
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -41,6 +41,16 @@
     ga('create', 'UA-146052-15', 'getpoole.com');
     ga('send', 'pageview');
   </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97981813-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-97981813-1');
+</script>
+
 
   {% seo %}
 </head>
