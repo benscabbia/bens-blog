@@ -51,10 +51,9 @@ This post is heavily based on the excellent summary from [here](https://gist.git
 
 1. Choose descriptive and unambiguous names.
 2. Describe side effects.
-3. Use searchable names.
-4. Choose appropriate names for the level of abstraction.
-5. Replace magic numbers with named constants.
-6. Avoid encodings. Don't append prefixes or type information.
+3. Choose appropriate names for the level of abstraction.
+4. Replace magic numbers with named constants.
+5. Avoid encodings. Don't append prefixes or type information.
 
 ## Functions rules
 
@@ -86,11 +85,10 @@ This post is heavily based on the excellent summary from [here](https://gist.git
 3. Declare variables close to their usage.
 4. Dependent functions should be close.
 5. Similar functions should be close.
-6. Place functions in the downward direction.
-7. Keep lines short.
-8. Don't use horizontal alignment.
-9. Use white space to associate related things and disassociate weakly related.
-10. Don't break indentation.
+6. Keep lines short.
+7. Don't use horizontal alignment.
+8. Use white space to associate related things and disassociate weakly related.
+9. Don't break indentation.
 
 ## Objects and data structures
 
@@ -102,7 +100,7 @@ This post is heavily based on the excellent summary from [here](https://gist.git
 6. Small number of instance variables.
 7. Base class should know nothing about their derivatives.
 8. Better to have many functions than to pass some code into a function to select a behaviour.
-9. Prefer non-static methods to static methods. Unless you're certain you won't need polymorphic behaviour.
+9. Prefer (public) non-static methods to static methods. Unless you're certain you won't need polymorphic behaviour.
 10. Keep interfaces tight and small.
 
 ## Tests
