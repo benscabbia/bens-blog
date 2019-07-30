@@ -41,3 +41,23 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 ---
 
 ## Chapter 2
+
+- **Users don't read, they scan most of the time**
+  - Don't expect them to read your carefully crafted text
+- **Users satisfice** (users pick the first reasonable option, not the best option)
+  - Why do web users not look for the best choice?
+    - Time: optimising is hard, satisficing is more efficient
+    - Low consequences: if you get it wrong, you can click back
+    - No value guarantee: in poorly designed sites, spending more time does not mean we will make a better choice
+    - Fun: there is an eleement of chance, which might be quick and pleasantly surprising
+- **Most don't know how things work, they muddle through things** - you use something every day, but do you really know how it works, or just muddle through it and make plausible explanations
+  - we do this as its not important
+  - we stick to something that it works, but unlikely to look for a better way
+- **we don't want users to muddle through things, we want them to feel in control**
+  - its more efficient
+  - more power to user
+  - they'll feel smarter, so more likely to come back
+
+---
+
+## Chapter 3
