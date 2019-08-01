@@ -93,4 +93,19 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 
 ---
 
-## Chapter 5
+## Chapter 5 - Omit ~~needless~~ words
+
+- **1/2 words on most webpages are redundant** and therefore can be removed without losing meaning
+- Once removed half - remove the rest!
+  - **The point here is that you should be ruthless** as it
+    - **Reduces noise levels**
+    - **Makes the useful content more prominent**
+    - **Shorter pages, more content per screen**
+- **Avoid happy talk**
+  - When you read the start of the article and it provides no information except for telling you how great they are, rather than explaining what makes them great
+  - Its small talk, most web users just want to get to the point
+  - Its fine on home page, but don't let it leak everywhere
+- **Avoid instructions** - no one reads them. You should make it self explanatory
+  - A survey with instructions - no one will read it if its long, make it short
+
+## Chapter 6
