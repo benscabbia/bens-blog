@@ -83,3 +83,14 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 ---
 
 ## Chapter 4 - Animal, Vegetable, or Mineral
+
+- Rule of thumb on number of clicks is 3 mindless == 1 thought click
+- **Choices can be difficult**, when they are **provide information that is**:
+  - **Brief** - minimun viable information
+  - **Timely** - well placed - exactly when needed
+  - **Unavoidable** - formatted in a way ensuing its noticed
+    - E.g. crossing that has 'look right for traffic' markings
+
+---
+
+## Chapter 5
