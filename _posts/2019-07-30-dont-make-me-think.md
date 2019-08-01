@@ -108,4 +108,34 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 - **Avoid instructions** - no one reads them. You should make it self explanatory
   - A survey with instructions - no one will read it if its long, make it short
 
-## Chapter 6
+## Chapter 6 - Street signs and Breadcrumbs
+
+- **People won't use your website if they can't find their way around it**
+- Problem with web is that there is no sense of scale, direction or location (unlike physical environments)
+- **Navigation must be good** to compensate for this as it
+  - **Tell us what's there** - visible hierarchy tells us what the site contains & navigation reveals content.
+  - **How to use the site** - when done well, you know where to begin and your options
+  - **Gives us confidence in the people who built it** - clear and well-thought-out navigation is one of best opportunities a site has to create a good impression
+- **Maintain consistent navigation** on all pages, except for forms/checkouts, where its noise. Strimmed down version with just a home button is enough
+- **Don't neglect secondary or tertiary navigation**
+  - Primary is most important, but you shouldn't go ad-hoc for the next few levels. They need same attention to detail
+- **Page names are important!**
+  - Every page needs a prominent name and it needs to be in the right place matching what the user clicked - a URL is not enough
+- **Mark where you are** - 'you are here' - mark the links to show what page the user is navigating
+  - Make it obvious, don't try to be clever as users don't have time
+- **Breadcrumbs are useful** in larger sites, just make sure
+  - they're at the top
+  - use '>' between levels
+  - boldface the last item
+- **Tabs are underrated, use them as they're easy and tried and tested**.
+- **'Trunck' test** - on any page, you should be able to answer below as quickly as possible:
+  - Site ID
+  - Page name
+  - Sections
+  - Local navigation
+  - "You're here" indicators
+  - Search
+
+---
+
+## Chapter 7
