@@ -40,7 +40,7 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 
 ---
 
-## Chapter 2
+## Chapter 2 - How we really use the web
 
 - **Users don't read, they scan most of the time**
   - Don't expect them to read your carefully crafted text
@@ -60,4 +60,26 @@ I'm away on holiday, and decided to pickup a copy of the highly rated [Don't mak
 
 ---
 
-## Chapter 3
+## Chapter 3 - Billboard Design 101
+
+- **Innovate when you know you have a better idea, but take advantage of conventions when you don't**
+  - **Don't** try and **reinvent the wheel** unless
+    - Its so clear and self-explanatory that there is no learning curve
+    - Adds so much value that its worth a small learning curve
+- You should still try and **be creative and innovative** and add as much aesthetic appeal as you can, just make sure its usable
+- **Clarity thumps consistency** - if you can make something significantly clearer at the expense of a bit of consistency, do it
+- **Optimise for scanning**, use hierarchies effectively, sizes, fonts, sections to sort and group content
+  - Use **plenty of headings** - make sure size/thickness is different for sub headings and have more space above a heading than below to seperate content
+  - **Keep paragraphs short** - even single sentence paragraphs are fine!
+  - **Use bulleted lists** - almost anything that can be bulleted, should be. Add a little bit of space between each point to make it clearer
+  - **Highlight key terms** - scanning consists of looking for key words/phrases. Bold most important, but not too many or less effective
+- **Make it obvious what is clickable**
+- **Keep the noise down**
+  - Shouting - **not everything can be important**, you have to be discliplined.
+  - Disorganization - if the page looks like a ransacked room, then designer doesn't understand **importance of structure**
+  - Clutter - **too much stuff**. Low signal to noise ratio - lots of noise, little information.
+    - assume everything is visual noise, and remove anything that's not making a real contribution
+
+---
+
+## Chapter 4 - Animal, Vegetable, or Mineral
