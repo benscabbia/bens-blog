@@ -1,49 +1,47 @@
 # Permalinks
 #
-permalink:           /:categories/:title
+permalink: /:categories/:title
 
 # Setup
-title:               Ben's Blog 
-tagline:             'A place to share my thoughts'
-description:         Ben's Blog
-url:                 https://benscabbia.co.uk 
-baseurl:             '' 
-paginate:            5
+title: Ben's Blog
+tagline: "A place to share my thoughts"
+description: Ben's Blog
+url: https://benscabbia.co.uk
+baseurl: ""
+paginate: 5
 
 # About/contact
 author:
-  name:              Benjamin Scabbia 
-  url:               https://benscabbia.co.uk
-  email:             benscabbia@gmail.com
-  stackoverflowId:   3828228
-  linkedIn:          benjaminscabbia
-  github:            benscabbia
-  gitlab:            benscabbia
-  #twitter:           
+  name: Ben Scabbia
+  url: https://benscabbia.co.uk
+  email: benscabbia@gmail.com
+  stackoverflowId: 3828228
+  linkedIn: benscabbia
+  github: benscabbia
+  gitlab: benscabbia
+  #twitter:
 
 github:
   repo: https://github.com/benscabbia/bens-blog
 
 # For SEO Tag
 social:
-  name:             Ben Scabbia
+  name: Ben Scabbia
   links:
     - https://github.com/benscabbia
     - https://gitlab.com/benscabbia
     - https://stackoverflow.com/users/3828228/benscabbia
-    - https://www.linkedin.com/in/benjaminscabbia/
+    - https://www.linkedin.com/in/benscabbia/
 
 # Custom vars
-version:             1.0.0
+version: 1.0.0
 
 disqus:
   shortname: benscabbia
-  
+
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-seo-tag 
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-
-
