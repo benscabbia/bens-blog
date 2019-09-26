@@ -69,7 +69,7 @@ If you’re using MVC 6, you can skip this next paragraph as I believe it is alr
 
 ![DI nuget package]({{ site.baseurl}}{% link /assets/images/di-nuget-package.png %}){: .center-image }
 
-Once installed, complete the steps in [this article](https://scottdorman.github.io/2016/03/17/integrating-asp.net-core-dependency-injection-in-mvc-4/).
+Once installed, complete the steps in [this article](https://scottdorman.blog/2016/03/17/integrating-asp-net-core-dependency-injection-in-mvc-4/).
 
 Now we simply register our new services in the ConfiureServices method, who is now responsible for defining the services the application will use:
 
